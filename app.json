@@ -1,0 +1,12 @@
+{
+  "name": "videoCall",
+  "displayName": "videoCall",
+  "expo": {
+    "name": "videoCall",
+    "slug": "videoCall",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
