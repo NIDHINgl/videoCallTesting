@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-android:background="@drawable/call_bg">
+android:background="@android:color/background_dark">
 
 <RelativeLayout
     android:id="@+id/callInfoLayout"
@@ -18,8 +18,8 @@ android:background="@drawable/call_bg">
         android:id="@+id/callStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/incoming_call"
-        android:textColor="@color/black"
+        android:text="incoming call"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:gravity="center"
         />
@@ -28,7 +28,7 @@ android:background="@drawable/call_bg">
         android:id="@+id/callerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@android:color/black"
         android:textSize="40sp"
         android:layout_below="@+id/callStatus"
         android:fontFamily="sans-serif-light"
@@ -57,24 +57,24 @@ android:background="@drawable/call_bg">
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-        <ImageButton
+        <Button
             android:id="@+id/reject_call_btn"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:scaleType="fitCenter"
             android:background="@null"
-            android:src="@drawable/rjt_btn"
+            android:text="reject"
             android:layout_alignParentRight="true"
          />
 
-        <ImageButton
+        <Button
             android:id="@+id/accept_call_btn"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:background="@null"
             android:scaleType="fitCenter"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/acpt_btn" />
+            android:text="accept" />
         </RelativeLayout>
 
        </LinearLayout>

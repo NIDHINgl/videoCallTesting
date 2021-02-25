@@ -1,3 +1,33 @@
+package com.videocall;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import com.facebook.react.ReactActivity;
+import com.facebook.react.bridge.Arguments;
+import com.facebook.react.bridge.ReactContext;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
+import com.videocall.MainActivity;
+import com.videocall.R;
+
 public class IncomingCallScreenActivity extends ReactActivity {
 
     private static final String TAG = "MessagingService";
@@ -24,7 +54,7 @@ public class IncomingCallScreenActivity extends ReactActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
                 | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
 
-        setContentView(R.layout.activity_call_incoming);
+        setContentView(R.layout.incoming_call_activity);
 
         Intent intent = getIntent();
         String call_type=intent.getStringExtra("MESSAGE_TYPE");
@@ -58,7 +88,7 @@ public class IncomingCallScreenActivity extends ReactActivity {
         final ReactContext reactContext = getReactInstanceManager().getCurrentReactContext();
 
         ImageButton acceptCallBtn = (ImageButton) findViewById(R.id.accept_call_btn);
-        acceptCallBtn.setOnClickListener(new OnClickListener() {
+        acceptCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WritableMap params = Arguments.createMap();
@@ -80,7 +110,7 @@ public class IncomingCallScreenActivity extends ReactActivity {
         });
 
         ImageButton rejectCallBtn = (ImageButton) findViewById(R.id.reject_call_btn);
-        rejectCallBtn.setOnClickListener(new OnClickListener() {
+        rejectCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WritableMap params = Arguments.createMap();

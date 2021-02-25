@@ -1,4 +1,18 @@
-public class FirebaseMessagingService
+package com.videocall;
+
+import android.app.ActivityManager;
+import android.content.Intent;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import com.facebook.react.modules.core.DeviceEventManagerModule;
+
+import java.util.Iterator;
+import java.util.List;
+
+import static android.content.Context.ACTIVITY_SERVICE;
+
+public class MyFirebaseMessagingService
         extends FirebaseMessagingService {
 
     private static DeviceEventManagerModule.RCTDeviceEventEmitter eventEmitter = null;
