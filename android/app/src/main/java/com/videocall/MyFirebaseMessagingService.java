@@ -6,6 +6,8 @@ import android.content.Intent;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.facebook.react.modules.core.DeviceEventManagerModule;
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Iterator;
 import java.util.List;
@@ -45,7 +47,7 @@ public class MyFirebaseMessagingService
                 startActivity(i);
         }else if(disconnectCallType.equals((notifDataType))){
             LocalBroadcastManager localBroadcastManager = LocalBroadcastManager
-                    .getInstance(FirebaseMessagingService.this);
+                    .getInstance(MyFirebaseMessagingService.this);
             localBroadcastManager.sendBroadcast(new Intent(
                     "com.incomingcallscreenactivity.action.close"));
         }
