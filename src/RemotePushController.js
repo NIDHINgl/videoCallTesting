@@ -10,6 +10,12 @@ const RemotePushController = () => {
         console.log("TOKEN:", token);
       }, // (required) Called when a remote or local notification is opened or received
       onNotification: function (notification) {
+        // DeviceEventEmitter.addListener("accept", () => {
+        //   //Do something!
+        // });
+        // DeviceEventEmitter.addListener("reject", () => {
+        //   //Do something!
+        // });
         console.log("REMOTE NOTIFICATION ==>", notification); // process the notification here
       },
       onNotificationOpenedApp: function (remoteMessage) {

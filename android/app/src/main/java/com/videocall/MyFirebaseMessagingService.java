@@ -22,6 +22,7 @@ public class MyFirebaseMessagingService
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        
         try {
             Log.e("IncomingCall","message has been received");
             String notifDataType = remoteMessage.getData().get("type");
