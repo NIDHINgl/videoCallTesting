@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import RemotePushController from "./src/RemotePushController";
+import MainComponent from "./src/MainComponent";
 import { DeviceEventEmitter } from "react-native";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
       <RemotePushController />
+      <MainComponent />
     </View>
   );
 }

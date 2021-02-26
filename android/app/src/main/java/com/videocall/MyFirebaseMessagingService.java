@@ -2,6 +2,7 @@ package com.videocall;
 
 import android.app.ActivityManager;
 import android.content.Intent;
+import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -22,6 +23,7 @@ public class MyFirebaseMessagingService
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         try {
+            Log.e("IncomingCall","message has been received");
             String notifDataType = remoteMessage.getData().get("type");
             String startCallType="incomingcall";
             String disconnectCallType="calldisconnected";

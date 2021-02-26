@@ -10,4 +10,8 @@ export default class MainComponent extends Component {
       //Do something!
     });
   }
+
+  render() {
+    return null;
+  }
 }
