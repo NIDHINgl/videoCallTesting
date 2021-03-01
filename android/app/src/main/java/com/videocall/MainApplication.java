@@ -34,6 +34,7 @@ import javax.annotation.Nullable;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+import com.b8ne.RNPusherPushNotifications.RNPusherPushNotificationsPackage;
 
 
 public class MainApplication extends Application implements ReactApplication {
