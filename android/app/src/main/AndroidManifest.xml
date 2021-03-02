@@ -23,7 +23,7 @@
   <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.VIBRATE" />
+    
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> -->
     <permission
@@ -38,6 +38,15 @@
     android:allowBackup="false"
     android:theme="@style/AppTheme"
   >
+  <meta-data android:name="com.dieam.reactnativepushnotification.default_notification_channel_id"
+      android:value="@string/default_notification_channel_id" />
+      <!-- <meta-data
+           android:name="com.google.firebase.messaging.default_notification_channel_id"
+           android:value="@string/default_notification_channel_id" /> -->
+  <meta-data  android:name="com.dieam.reactnativepushnotification.notification_channel_name"
+                android:value="video noti"/>
+        <meta-data  android:name="com.dieam.reactnativepushnotification.notification_channel_description"
+                    android:value="notification"/>
     <meta-data android:name="expo.modules.updates.EXPO_UPDATE_URL" android:value="YOUR-APP-URL-HERE"/>
     <meta-data android:name="expo.modules.updates.EXPO_SDK_VERSION" android:value="YOUR-APP-SDK-VERSION-HERE"/>
     <activity
@@ -56,6 +65,9 @@
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
     <meta-data  android:name="com.dieam.reactnativepushnotification.notification_foreground"
                     android:value="false"/>
+                    
+      
+     
         <!-- Change the resource name to your App's accent color - or any other color you want -->
         <meta-data  android:name="com.dieam.reactnativepushnotification.notification_color"
                     android:resource="@color/white"/> <!-- or @android:color/{name} to use a standard color -->
